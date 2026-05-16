@@ -1,0 +1,17 @@
+node_modules
+.DS_Store
+out
+build
+.cache
+public/audio/*.mp3
+public/audio/music/*.mp3
+public/audio/music/*.wav
+public/broll/**/*.mp4
+public/broll/**/*.mov
+public/sfx/*.wav
+public/sfx/*.mp3
+public/stills/*.jpg
+public/stills/*.png
+*.log
+.env
+.env.local

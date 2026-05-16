@@ -1,0 +1,35 @@
+{
+  "name": "toys-r-us-doc",
+  "version": "1.0.0",
+  "description": "Toys R Us documentary built in Remotion",
+  "scripts": {
+    "dev": "remotion studio",
+    "build": "remotion render ToysRUsDoc out/doc-final.mp4 --codec=h264 --crf=18",
+    "preview": "remotion render ToysRUsDoc out/preview.mp4 --frames=0-900",
+    "upgrade": "remotion upgrade",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "@remotion/cli": "^4.0.224",
+    "@remotion/three": "^4.0.224",
+    "@remotion/tailwind": "^4.0.224",
+    "@remotion/zod-types": "^4.0.224",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.224",
+    "three": "^0.169.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "@types/react": "^18.3.11",
+    "@types/three": "^0.169.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.3"
+  }
+}
