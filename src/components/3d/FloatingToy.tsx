@@ -1,6 +1,5 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig, interpolate, random} from 'remotion';
-import {Environment} from '@react-three/drei';
 import {Scene3D} from './Scene3D';
 
 const BlockStack: React.FC = () => {
@@ -96,7 +95,7 @@ export const FloatingToy: React.FC<{
       <directionalLight position={[6, 10, 4]} intensity={1.2} color="#fffaf2" castShadow />
       <directionalLight position={[-6, 2, 6]} intensity={0.5} color="#dc2626" />
       <pointLight position={[0, 4, 5]} intensity={0.8} color="#d4af37" />
-      <Environment preset="sunset" />
+      <hemisphereLight args={['#fffaf2', '#0a0d14', 0.45]} />
       {variant === 'blocks' ? <BlockStack /> : <RockingHorseSilhouette />}
       <ParticleField />
       <fog attach="fog" args={['#080810', 8, 24]} />

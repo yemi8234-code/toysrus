@@ -1,6 +1,5 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig, interpolate} from 'remotion';
-import {Environment} from '@react-three/drei';
 import {Scene3D} from './Scene3D';
 
 const Ring: React.FC<{
@@ -45,7 +44,7 @@ export const DataOrb: React.FC = () => {
       <ambientLight intensity={0.2} />
       <pointLight position={[0, 0, 0]} intensity={1.2} color="#dc2626" />
       <pointLight position={[3, 3, 3]} intensity={0.6} color="#d4af37" />
-      <Environment preset="night" />
+      <hemisphereLight args={['#dc2626', '#050507', 0.3]} />
 
       <mesh>
         <icosahedronGeometry args={[1.0, 1]} />

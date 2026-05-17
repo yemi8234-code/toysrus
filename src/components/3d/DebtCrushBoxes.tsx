@@ -1,6 +1,5 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig, interpolate, spring} from 'remotion';
-import {Environment} from '@react-three/drei';
 import {Scene3D} from './Scene3D';
 
 const Label: React.FC<{
@@ -53,7 +52,7 @@ export const DebtCrushBoxes: React.FC = () => {
       <ambientLight intensity={0.25} />
       <directionalLight position={[8, 12, 6]} intensity={1.3} color="#fffaf2" castShadow />
       <directionalLight position={[-6, 4, 8]} intensity={0.5} color="#dc2626" />
-      <Environment preset="city" />
+      <hemisphereLight args={['#fffaf2', '#0a0a12', 0.45]} />
 
       <mesh
         position={[0, 0, 0]}

@@ -227,7 +227,7 @@ export const Act0ColdOpen: React.FC = () => {
     <AbsoluteFill>
       <Sequence from={titleStart} durationInFrames={titleDur}>
         <BlurFade durationInFrames={28}>
-          <TitleCard3D text="TOYS" dollyDirection="in" />
+          <TitleCard3D text='TOYS "R" US' dollyDirection="in" />
         </BlurFade>
         <SfxMarker filename="cinematic-riser-long.wav" triggerFrame={0} />
       </Sequence>

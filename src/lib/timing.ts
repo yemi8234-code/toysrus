@@ -43,12 +43,14 @@ export const NARRATION_END_FRAME = lastCue ? lastCue.endFrame : 0;
 export const TOTAL_DURATION_FRAMES = NARRATION_END_FRAME + END_CARD_FRAMES;
 export const TOTAL_DURATION_SECONDS = TOTAL_DURATION_FRAMES / FPS;
 
+// Find the start frame of part-2 cue 95 ("In September of 2017") — that's the
+// Act II → Act III boundary (bankruptcy filing).
+const part2Cue95 = part2Cues[94];
+const ACT2_END_RELATIVE = part2Cue95 ? part2Cue95.startFrame : Math.round(250 * FPS);
+
 export const ACT_BOUNDARIES = {
   act0End: OPENING_BREATH_FRAMES + Math.round(50 * FPS),
   act1End: OPENING_BREATH_FRAMES + part1End,
-  act2End:
-    part2Offset +
-    (part2Cues.find((c) => c.text.toLowerCase().includes('act 3 the b'))
-      ?.startFrame ?? Math.round(50 * FPS)),
+  act2End: part2Offset + ACT2_END_RELATIVE,
   act3End: NARRATION_END_FRAME,
 } as const;

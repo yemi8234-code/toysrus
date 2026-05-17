@@ -1,6 +1,5 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig, interpolate, spring, random} from 'remotion';
-import {Environment} from '@react-three/drei';
 import {Scene3D} from './Scene3D';
 
 const Panel: React.FC<{
@@ -81,7 +80,7 @@ export const StoreCollapse: React.FC = () => {
       <FlickerLight position={[-4, 4, 2]} baseIntensity={0.6} />
       <FlickerLight position={[4, 4, 2]} baseIntensity={0.6} />
       <directionalLight position={[2, 6, 4]} intensity={0.2} color="#fffaf2" />
-      <Environment preset="night" />
+      <hemisphereLight args={['#1a1a25', '#000', 0.25]} />
 
       <mesh position={[0, -0.5, 0]} receiveShadow>
         <boxGeometry args={[12, 0.2, 4]} />

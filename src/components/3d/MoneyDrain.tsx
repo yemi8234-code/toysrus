@@ -1,6 +1,5 @@
 import React from 'react';
 import {useCurrentFrame, useVideoConfig, interpolate, random} from 'remotion';
-import {Environment} from '@react-three/drei';
 import {Scene3D} from './Scene3D';
 
 const Coin: React.FC<{seed: number}> = ({seed}) => {
@@ -57,7 +56,7 @@ export const MoneyDrain: React.FC<{
       <directionalLight position={[5, 8, 4]} intensity={1.1} color="#fffaf2" />
       <pointLight position={[0, -2, 0]} intensity={0.8} color="#dc2626" />
       <pointLight position={[0, 3, 2]} intensity={0.6} color="#d4af37" />
-      <Environment preset="warehouse" />
+      <hemisphereLight args={['#fffaf2', '#0a0a12', 0.4]} />
 
       {Array.from({length: coinCount}).map((_, i) => (
         <Coin key={i} seed={i} />
