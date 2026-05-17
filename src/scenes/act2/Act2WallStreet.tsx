@@ -392,10 +392,10 @@ export const Act2WallStreet: React.FC = () => {
         </CrossDissolve>
         <CaptionEmphasis
           text="$5 billion in debt."
-          entryFrame={40}
+          entryFrame={90}
           exitFrame={debtCrushDur - 14}
           size="title"
-          position={{top: 140, left: 100}}
+          position={{bottom: 90, left: 100}}
           align="left"
           color={COLORS.accent}
         />
