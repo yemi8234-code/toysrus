@@ -103,22 +103,22 @@ export const S07_Collapse = () => {
         </OctagonFrame>
       </div>
 
-      {/* 735 stores */}
+      {/* 735 stores — fades out as founder/darkness arrives */}
       <div style={{
         position:'absolute',
-        top:'46%', left:60,
+        top:'44%', left:60,
         transform:`translateY(${n735In}px)`,
-        opacity: Math.max(0, 1 - n735In/40),
+        opacity: Math.max(0, 1 - n735In/40) * (1 - founderFade),
       }}>
         <EditorialCallout text="735 stores." size={96} color={palette.ink}/>
       </div>
 
-      {/* 33,000 jobs */}
+      {/* 33,000 jobs — fades out as founder/darkness arrives */}
       <div style={{
         position:'absolute',
-        top:'60%', left:60,
+        top:'57%', left:60,
         transform:`translateY(${n33kIn}px)`,
-        opacity: Math.max(0, 1 - n33kIn/40),
+        opacity: Math.max(0, 1 - n33kIn/40) * (1 - founderFade),
       }}>
         <EditorialCallout text="33,000 jobs." size={72} color={palette.midGrey}/>
       </div>
@@ -130,10 +130,10 @@ export const S07_Collapse = () => {
         pointerEvents:'none',
       }}/>
 
-      {/* founder portrait — appears last, in near-silence */}
+      {/* founder portrait — appears last, in near-silence, centered */}
       <div style={{
         position:'absolute',
-        bottom:'12%', left:'50%',
+        top:'34%', left:'50%',
         transform:`translate(-50%, 0) translateY(${founderIn}px)`,
         opacity: founderFade,
       }}>

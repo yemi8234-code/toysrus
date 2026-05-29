@@ -98,13 +98,13 @@ export const S08_Twist = () => {
       {/* callout: "richer than they started" */}
       <div style={{
         position:'absolute',
-        bottom:'14%', left:60, right:60,
+        bottom:'22%', left:50, right:50,
         opacity: textFade,
         transform:`translateY(${textIn}px)`,
       }}>
         <EditorialCallout
           text="richer than they started."
-          size={64}
+          size={58}
           align="center"
           color={palette.lightGrey}
         />
