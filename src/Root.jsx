@@ -1,15 +1,17 @@
+import React from 'react';
 import { Composition } from 'remotion';
-import { MyComposition } from './MyComposition';
+import { ToysRUsDoc } from './Composition.jsx';
 
-export const RemotionRoot = () => {
-  return (
-    <Composition
-      id="MyComposition"
-      component={MyComposition}
-      durationInFrames={150}
-      fps={30}
-      width={1920}
-      height={1080}
-    />
-  );
-};
+const FPS = 30;
+const DURATION_S = 67.187;
+
+export const RemotionRoot = () => (
+  <Composition
+    id="ToysRUsDoc"
+    component={ToysRUsDoc}
+    durationInFrames={Math.ceil(DURATION_S * FPS)}
+    fps={FPS}
+    width={1080}
+    height={1920}
+  />
+);
